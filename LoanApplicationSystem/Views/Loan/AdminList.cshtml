@@ -1,0 +1,45 @@
+﻿@model IEnumerable<LoanApplicationSystem.Models.LoanApplication>
+
+@{
+    ViewBag.Title = "Admin - All Applications";
+}
+
+<h2 class="mt-4">All Loan Applications</h2>
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Company</th>
+            <th>Loan Type</th>
+            <th>Amount</th>
+            <th>Submission Date</th>
+            <th>Status</th>
+            <th>Update</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.BusinessName</td>
+                <td>@item.LoanPurpose</td>
+                <td>@item.LoanAmount</td>
+                <td>@item.SubmissionDAte.ToShortDateString()</td>
+                <td>
+                    @using (Html.BeginForm("UpdateStatus", "Loan", FormMethod.Post))
+                    {
+                        @Html.Hidden("ApplicationId", item.Id)
+                        <select name="Status" class="form-control">
+                            <option value="Pending" @(item.Status.ToString() == "Pending" ? "selected=\"selected\"" : "")>Pending</option>
+                            <option value="Approved" @(item.Status.ToString() == "Approved" ? "selected=\"selected\"" : "")>Approved</option>
+                            <option value="Rejected" @(item.Status.ToString() == "Rejected" ? "selected=\"selected\"" : "")>Rejected</option>
+                        </select>
+                        <button type="submit" class="btn btn-sm btn-primary mt-2">Update</button>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
