@@ -127,6 +127,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\ApprovalController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoanController.cs" />
     <Compile Include="Global.asax.cs">
@@ -140,8 +141,29 @@
     <Compile Include="Migrations\202505210424451_AddSubmissionDate.Designer.cs">
       <DependentUpon>202505210424451_AddSubmissionDate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202505251242282_CorporateModelUpdate.cs" />
+    <Compile Include="Migrations\202505251242282_CorporateModelUpdate.Designer.cs">
+      <DependentUpon>202505251242282_CorporateModelUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202505251310377_CodeUpdated.cs" />
+    <Compile Include="Migrations\202505251310377_CodeUpdated.Designer.cs">
+      <DependentUpon>202505251310377_CodeUpdated.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202505271711328_AddApprovalTable.cs" />
+    <Compile Include="Migrations\202505271711328_AddApprovalTable.Designer.cs">
+      <DependentUpon>202505271711328_AddApprovalTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202505271809220_UpdatedAdmin.cs" />
+    <Compile Include="Migrations\202505271809220_UpdatedAdmin.Designer.cs">
+      <DependentUpon>202505271809220_UpdatedAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202505280559258_update styling.cs" />
+    <Compile Include="Migrations\202505280559258_update styling.Designer.cs">
+      <DependentUpon>202505280559258_update styling.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
+    <Compile Include="Models\Approval.cs" />
     <Compile Include="Models\LoanApplication.cs" />
     <Compile Include="Models\LoanTrackingViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -200,6 +222,8 @@
     <Content Include="Views\Loan\Apply.cshtml" />
     <Content Include="Views\Loan\Success.cshtml" />
     <Content Include="Views\Loan\AdminList.cshtml" />
+    <Content Include="Views\Loan\DashboardWithApply.cshtml" />
+    <Content Include="Views\Approval\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -237,6 +261,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202505210424451_AddSubmissionDate.resx">
       <DependentUpon>202505210424451_AddSubmissionDate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202505251242282_CorporateModelUpdate.resx">
+      <DependentUpon>202505251242282_CorporateModelUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202505251310377_CodeUpdated.resx">
+      <DependentUpon>202505251310377_CodeUpdated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202505271711328_AddApprovalTable.resx">
+      <DependentUpon>202505271711328_AddApprovalTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202505271809220_UpdatedAdmin.resx">
+      <DependentUpon>202505271809220_UpdatedAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202505280559258_update styling.resx">
+      <DependentUpon>202505280559258_update styling.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

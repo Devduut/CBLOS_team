@@ -1,8 +1,9 @@
-﻿using System.Web;
-using System.Web.Mvc;
-using LoanApplicationSystem.Models;
+﻿using System;
 using System.IO;
 using System.Linq;
+using System.Web;
+using System.Web.Mvc;
+using LoanApplicationSystem.Models;
 
 namespace LoanApplicationSystem.Controllers
 {
@@ -10,6 +11,10 @@ namespace LoanApplicationSystem.Controllers
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
+        public ActionResult dashboardWithApply()
+        {
+            return View();
+        }
         public ActionResult Apply()
         {
             return View();
@@ -20,18 +25,14 @@ namespace LoanApplicationSystem.Controllers
         {
             if (ModelState.IsValid)
             {
-                if (uploadDocument != null && uploadDocument.ContentLength > 0)
-                {
-                    var fileName = Path.GetFileName(uploadDocument.FileName);
-                    var path = Path.Combine(Server.MapPath("~/UploadedDocs/"), fileName);
-                    uploadDocument.SaveAs(path);
-                    model.UploadedFileName = fileName;
-                }
 
+                model.SubmissionDate = DateTime.Now;
                 db.LoanApplications.Add(model);
                 db.SaveChanges();
+
                 return RedirectToAction("Success");
             }
+
             return View(model);
         }
 
@@ -43,6 +44,19 @@ namespace LoanApplicationSystem.Controllers
         public ActionResult AdminList()
         {
             return View(db.LoanApplications.ToList());
+        }
+
+        [HttpPost]
+        public ActionResult UpdateStatus(int ApplicationId, ApplicationStatus Status)
+        {
+            var application = db.LoanApplications.FirstOrDefault(a => a.Id == ApplicationId);
+            if (application != null)
+            {
+                application.Status = Status;
+                db.SaveChanges();
+                TempData["Message"] = "Status updated successfully!";
+            }
+            return RedirectToAction("AdminList");
         }
     }
 }

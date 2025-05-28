@@ -8,5 +8,10 @@ namespace LoanApplicationSystem.Models
         public ApplicationDbContext() : base("DefaultConnection") { }
 
         public DbSet<LoanApplication> LoanApplications { get; set; }
+        public DbSet<Approval> Approvals { get; set; }
     }
 }
+
+
+
+

@@ -12,3 +12,5 @@ namespace LoanApplicationSystem.Models
         public DateTime SubmissionDate { get; set; }
     }
 }
+
+

@@ -1,0 +1,66 @@
+﻿@model List<LoanApplicationSystem.Models.Approval>
+@{
+    ViewBag.Title = "Approval History";
+    var applicationId = ViewBag.ApplicationId;
+}
+
+<div class="container mt-5">
+    <h2>Approval History - Application ID: @applicationId</h2>
+
+    <table class="table table-bordered mt-4">
+        <thead class="table-dark">
+            <tr>
+                <th>Level</th>
+                <th>Approver ID</th>
+                <th>Status</th>
+                <th>Comments</th>
+                <th>Approval Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.ApprovalLevel</td>
+                    <td>@item.ApproverId</td>
+                    <td>@item.ApprovalStatus</td>
+                    <td>@item.Comments</td>
+                    <td>@item.ApprovalDate.ToShortDateString()</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <h4 class="mt-4">Add New Approval</h4>
+    @using (Html.BeginForm("AddApproval", "Approval", FormMethod.Post))
+    {
+        @Html.Hidden("ApplicationId", (int)ViewBag.ApplicationId)
+
+        <div class="row">
+            <div class="col-md-2">
+                <label>Level</label>
+                <input name="ApprovalLevel" type="number" class="form-control" required />
+            </div>
+            <div class="col-md-2">
+                <label>Approver ID</label>
+                <input name="ApproverId" type="number" class="form-control" required />
+            </div>
+            <div class="col-md-3">
+                <label>Status</label>
+                <select name="ApprovalStatus" class="form-control">
+                    <option>Pending</option>
+                    <option>Approved</option>
+                    <option>Rejected</option>
+                </select>
+            </div>
+            <div class="col-md-4">
+                <label>Comments</label>
+                <input name="Comments" class="form-control" />
+            </div>
+            <div class="col-md-1 d-flex align-items-end">
+                <button class="btn btn-success" type="submit">Add</button>
+            </div>
+        </div>
+    }
+</div>
+

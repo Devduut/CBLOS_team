@@ -1,42 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\2406688\\source\\repos\\LoanApplicationSystem\\",
+  "WorkspaceRootPath": "C:\\Users\\2406688\\Desktop\\LoanApplicationSystem\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BEDEBF30-C11B-44BF-AE3A-DC5F618E80AD}|LoanApplicationSystem\\LoanApplicationSystem.csproj|c:\\users\\2406688\\source\\repos\\loanapplicationsystem\\loanapplicationsystem\\migrations\\202505210424451_addsubmissiondate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BEDEBF30-C11B-44BF-AE3A-DC5F618E80AD}|LoanApplicationSystem\\LoanApplicationSystem.csproj|solutionrelative:loanapplicationsystem\\migrations\\202505210424451_addsubmissiondate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BEDEBF30-C11B-44BF-AE3A-DC5F618E80AD}|LoanApplicationSystem\\LoanApplicationSystem.csproj|c:\\users\\2406688\\source\\repos\\loanapplicationsystem\\loanapplicationsystem\\models\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BEDEBF30-C11B-44BF-AE3A-DC5F618E80AD}|LoanApplicationSystem\\LoanApplicationSystem.csproj|solutionrelative:loanapplicationsystem\\models\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BEDEBF30-C11B-44BF-AE3A-DC5F618E80AD}|LoanApplicationSystem\\LoanApplicationSystem.csproj|c:\\users\\2406688\\source\\repos\\loanapplicationsystem\\loanapplicationsystem\\models\\loantrackingviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BEDEBF30-C11B-44BF-AE3A-DC5F618E80AD}|LoanApplicationSystem\\LoanApplicationSystem.csproj|solutionrelative:loanapplicationsystem\\models\\loantrackingviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BEDEBF30-C11B-44BF-AE3A-DC5F618E80AD}|LoanApplicationSystem\\LoanApplicationSystem.csproj|c:\\users\\2406688\\source\\repos\\loanapplicationsystem\\loanapplicationsystem\\views\\loan\\adminlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{BEDEBF30-C11B-44BF-AE3A-DC5F618E80AD}|LoanApplicationSystem\\LoanApplicationSystem.csproj|c:\\users\\2406688\\desktop\\loanapplicationsystem\\loanapplicationsystem\\views\\loan\\adminlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{BEDEBF30-C11B-44BF-AE3A-DC5F618E80AD}|LoanApplicationSystem\\LoanApplicationSystem.csproj|solutionrelative:loanapplicationsystem\\views\\loan\\adminlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BEDEBF30-C11B-44BF-AE3A-DC5F618E80AD}|LoanApplicationSystem\\LoanApplicationSystem.csproj|c:\\users\\2406688\\source\\repos\\loanapplicationsystem\\loanapplicationsystem\\views\\loan\\apply.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{BEDEBF30-C11B-44BF-AE3A-DC5F618E80AD}|LoanApplicationSystem\\LoanApplicationSystem.csproj|solutionrelative:loanapplicationsystem\\views\\loan\\apply.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{BEDEBF30-C11B-44BF-AE3A-DC5F618E80AD}|LoanApplicationSystem\\LoanApplicationSystem.csproj|c:\\users\\2406688\\desktop\\loanapplicationsystem\\loanapplicationsystem\\views\\loan\\dashboardwithapply.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BEDEBF30-C11B-44BF-AE3A-DC5F618E80AD}|LoanApplicationSystem\\LoanApplicationSystem.csproj|solutionrelative:loanapplicationsystem\\views\\loan\\dashboardwithapply.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BEDEBF30-C11B-44BF-AE3A-DC5F618E80AD}|LoanApplicationSystem\\LoanApplicationSystem.csproj|c:\\users\\2406688\\source\\repos\\loanapplicationsystem\\loanapplicationsystem\\models\\loanapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BEDEBF30-C11B-44BF-AE3A-DC5F618E80AD}|LoanApplicationSystem\\LoanApplicationSystem.csproj|solutionrelative:loanapplicationsystem\\models\\loanapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BEDEBF30-C11B-44BF-AE3A-DC5F618E80AD}|LoanApplicationSystem\\LoanApplicationSystem.csproj|C:\\Users\\2406688\\source\\repos\\LoanApplicationSystem\\loanapplicationsystem\\controllers\\loancontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BEDEBF30-C11B-44BF-AE3A-DC5F618E80AD}|LoanApplicationSystem\\LoanApplicationSystem.csproj|c:\\users\\2406688\\desktop\\loanapplicationsystem\\loanapplicationsystem\\controllers\\loancontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BEDEBF30-C11B-44BF-AE3A-DC5F618E80AD}|LoanApplicationSystem\\LoanApplicationSystem.csproj|solutionrelative:loanapplicationsystem\\controllers\\loancontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BEDEBF30-C11B-44BF-AE3A-DC5F618E80AD}|LoanApplicationSystem\\LoanApplicationSystem.csproj|C:\\Users\\2406688\\source\\repos\\LoanApplicationSystem\\loanapplicationsystem\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{BEDEBF30-C11B-44BF-AE3A-DC5F618E80AD}|LoanApplicationSystem\\LoanApplicationSystem.csproj|solutionrelative:loanapplicationsystem\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BEDEBF30-C11B-44BF-AE3A-DC5F618E80AD}|LoanApplicationSystem\\LoanApplicationSystem.csproj|C:\\Users\\2406688\\source\\repos\\LoanApplicationSystem\\loanapplicationsystem\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BEDEBF30-C11B-44BF-AE3A-DC5F618E80AD}|LoanApplicationSystem\\LoanApplicationSystem.csproj|solutionrelative:loanapplicationsystem\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 98,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -54,122 +30,41 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "202505210424451_AddSubmissionDate.cs",
-              "DocumentMoniker": "C:\\Users\\2406688\\source\\repos\\LoanApplicationSystem\\LoanApplicationSystem\\Migrations\\202505210424451_AddSubmissionDate.cs",
-              "RelativeDocumentMoniker": "LoanApplicationSystem\\Migrations\\202505210424451_AddSubmissionDate.cs",
-              "ToolTip": "C:\\Users\\2406688\\source\\repos\\LoanApplicationSystem\\LoanApplicationSystem\\Migrations\\202505210424451_AddSubmissionDate.cs",
-              "RelativeToolTip": "LoanApplicationSystem\\Migrations\\202505210424451_AddSubmissionDate.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-21T04:24:49.668Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "LoanApplication.cs",
-              "DocumentMoniker": "C:\\Users\\2406688\\source\\repos\\LoanApplicationSystem\\LoanApplicationSystem\\Models\\LoanApplication.cs",
-              "RelativeDocumentMoniker": "LoanApplicationSystem\\Models\\LoanApplication.cs",
-              "ToolTip": "C:\\Users\\2406688\\source\\repos\\LoanApplicationSystem\\LoanApplicationSystem\\Models\\LoanApplication.cs",
-              "RelativeToolTip": "LoanApplicationSystem\\Models\\LoanApplication.cs",
-              "ViewState": "AgIAACUAAAAAAAAAAADwvywAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-21T04:15:47.666Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Apply.cshtml",
-              "DocumentMoniker": "C:\\Users\\2406688\\source\\repos\\LoanApplicationSystem\\LoanApplicationSystem\\Views\\Loan\\Apply.cshtml",
-              "RelativeDocumentMoniker": "LoanApplicationSystem\\Views\\Loan\\Apply.cshtml",
-              "ToolTip": "C:\\Users\\2406688\\source\\repos\\LoanApplicationSystem\\LoanApplicationSystem\\Views\\Loan\\Apply.cshtml",
-              "RelativeToolTip": "LoanApplicationSystem\\Views\\Loan\\Apply.cshtml",
-              "ViewState": "AgIAACwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "DashboardWithApply.cshtml",
+              "DocumentMoniker": "C:\\Users\\2406688\\Desktop\\LoanApplicationSystem\\LoanApplicationSystem\\Views\\Loan\\DashboardWithApply.cshtml",
+              "RelativeDocumentMoniker": "LoanApplicationSystem\\Views\\Loan\\DashboardWithApply.cshtml",
+              "ToolTip": "C:\\Users\\2406688\\Desktop\\LoanApplicationSystem\\LoanApplicationSystem\\Views\\Loan\\DashboardWithApply.cshtml",
+              "RelativeToolTip": "LoanApplicationSystem\\Views\\Loan\\DashboardWithApply.cshtml",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAAAAwAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-21T04:15:40.428Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AdminList.cshtml",
-              "DocumentMoniker": "C:\\Users\\2406688\\source\\repos\\LoanApplicationSystem\\LoanApplicationSystem\\Views\\Loan\\AdminList.cshtml",
-              "RelativeDocumentMoniker": "LoanApplicationSystem\\Views\\Loan\\AdminList.cshtml",
-              "ToolTip": "C:\\Users\\2406688\\source\\repos\\LoanApplicationSystem\\LoanApplicationSystem\\Views\\Loan\\AdminList.cshtml",
-              "RelativeToolTip": "LoanApplicationSystem\\Views\\Loan\\AdminList.cshtml",
-              "ViewState": "AgIAACwAAAAAAAAAAAAAABsAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-21T03:57:39.756Z",
+              "WhenOpened": "2025-05-28T05:48:58.103Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "LoanTrackingViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\2406688\\source\\repos\\LoanApplicationSystem\\LoanApplicationSystem\\Models\\LoanTrackingViewModel.cs",
-              "RelativeDocumentMoniker": "LoanApplicationSystem\\Models\\LoanTrackingViewModel.cs",
-              "ToolTip": "C:\\Users\\2406688\\source\\repos\\LoanApplicationSystem\\LoanApplicationSystem\\Models\\LoanTrackingViewModel.cs",
-              "RelativeToolTip": "LoanApplicationSystem\\Models\\LoanTrackingViewModel.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAAwA0AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-21T03:50:17.988Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\2406688\\source\\repos\\LoanApplicationSystem\\LoanApplicationSystem\\Models\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "LoanApplicationSystem\\Models\\ApplicationDbContext.cs",
-              "ToolTip": "C:\\Users\\2406688\\source\\repos\\LoanApplicationSystem\\LoanApplicationSystem\\Models\\ApplicationDbContext.cs",
-              "RelativeToolTip": "LoanApplicationSystem\\Models\\ApplicationDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-20T17:27:34.051Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{74946827-37a0-11d2-a273-00c04f8ef4ff}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
               "Title": "LoanController.cs",
-              "DocumentMoniker": "C:\\Users\\2406688\\source\\repos\\LoanApplicationSystem\\LoanApplicationSystem\\Controllers\\LoanController.cs",
+              "DocumentMoniker": "C:\\Users\\2406688\\Desktop\\LoanApplicationSystem\\LoanApplicationSystem\\Controllers\\LoanController.cs",
               "RelativeDocumentMoniker": "LoanApplicationSystem\\Controllers\\LoanController.cs",
-              "ToolTip": "C:\\Users\\2406688\\source\\repos\\LoanApplicationSystem\\LoanApplicationSystem\\Controllers\\LoanController.cs",
+              "ToolTip": "C:\\Users\\2406688\\Desktop\\LoanApplicationSystem\\LoanApplicationSystem\\Controllers\\LoanController.cs",
               "RelativeToolTip": "LoanApplicationSystem\\Controllers\\LoanController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-20T17:34:58.513Z",
+              "WhenOpened": "2025-05-28T05:47:13.203Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\2406688\\source\\repos\\LoanApplicationSystem\\LoanApplicationSystem\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "LoanApplicationSystem\\Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\2406688\\source\\repos\\LoanApplicationSystem\\LoanApplicationSystem\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "LoanApplicationSystem\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-20T17:34:55.099Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Web.config",
-              "DocumentMoniker": "C:\\Users\\2406688\\source\\repos\\LoanApplicationSystem\\LoanApplicationSystem\\Web.config",
-              "RelativeDocumentMoniker": "LoanApplicationSystem\\Web.config",
-              "ToolTip": "C:\\Users\\2406688\\source\\repos\\LoanApplicationSystem\\LoanApplicationSystem\\Web.config",
-              "RelativeToolTip": "LoanApplicationSystem\\Web.config",
-              "ViewState": "AgIAAEEAAAAAAAAAAAAQwEgAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2025-05-20T17:28:42.478Z",
+              "DocumentIndex": 0,
+              "Title": "AdminList.cshtml",
+              "DocumentMoniker": "C:\\Users\\2406688\\Desktop\\LoanApplicationSystem\\LoanApplicationSystem\\Views\\Loan\\AdminList.cshtml",
+              "RelativeDocumentMoniker": "LoanApplicationSystem\\Views\\Loan\\AdminList.cshtml",
+              "ToolTip": "C:\\Users\\2406688\\Desktop\\LoanApplicationSystem\\LoanApplicationSystem\\Views\\Loan\\AdminList.cshtml",
+              "RelativeToolTip": "LoanApplicationSystem\\Views\\Loan\\AdminList.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-25T12:35:14.298Z",
               "EditorCaption": ""
             }
           ]

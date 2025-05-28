@@ -4,42 +4,109 @@
     ViewBag.Title = "Admin - All Applications";
 }
 
-<h2 class="mt-4">All Loan Applications</h2>
+<style>
+    body {
+        background-color: #eaf4fb;
+    }
+</style>
 
-<table class="table table-bordered table-striped">
-    <thead>
-        <tr>
-            <th>ID</th>
-            <th>Company</th>
-            <th>Loan Type</th>
-            <th>Amount</th>
-            <th>Submission Date</th>
-            <th>Status</th>
-            <th>Update</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
+<div class="container mt-5">
+    <h2 class="mb-4">All Loan Applications</h2>
+    <div class="row mb-3">
+        <div class="col-md-6">
+            <input type="text" id="searchInput" class="form-control" placeholder="🔎Search by Company Name" />
+        </div>
+        <div class="col-md-6">
+            <select id="statusFilter" class="form-select">
+                <option value="">❗Filter by Status</option>
+                <option value="Pending">⏳ Pending</option>
+                <option value="Approved">✅ Approved</option>
+                <option value="Rejected">❌ Rejected</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="table-responsive">
+    <table class="table table-bordered table-striped align-middle" id="loanTable">
+        <thead class="table-dark">
             <tr>
-                <td>@item.Id</td>
-                <td>@item.BusinessName</td>
-                <td>@item.LoanPurpose</td>
-                <td>@item.LoanAmount</td>
-                <td>@item.SubmissionDAte.ToShortDateString()</td>
-                <td>
-                    @using (Html.BeginForm("UpdateStatus", "Loan", FormMethod.Post))
-                    {
-                        @Html.Hidden("ApplicationId", item.Id)
-                        <select name="Status" class="form-control">
-                            <option value="Pending" @(item.Status.ToString() == "Pending" ? "selected=\"selected\"" : "")>Pending</option>
-                            <option value="Approved" @(item.Status.ToString() == "Approved" ? "selected=\"selected\"" : "")>Approved</option>
-                            <option value="Rejected" @(item.Status.ToString() == "Rejected" ? "selected=\"selected\"" : "")>Rejected</option>
-                        </select>
-                        <button type="submit" class="btn btn-sm btn-primary mt-2">Update</button>
-                    }
-                </td>
+                <th>ID</th>
+                <th>Company</th>
+                <th>Loan Type</th>
+                <th>Amount (INR)</th>
+                <th>Submission Date</th>
+                <th>Status</th>
+                <th>Update</th>
             </tr>
-        }
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.CompanyName</td>
+                    <td>@item.LoanPurpose</td>
+                    <td>@item.LoanAmount.ToString("C0")</td>
+                    <td>@item.SubmissionDate.ToShortDateString()</td>
+                    @{
+                        var statusClass = item.Status == LoanApplicationSystem.Models.ApplicationStatus.Approved ? "bg-success text-white"
+                                        : item.Status == LoanApplicationSystem.Models.ApplicationStatus.Rejected ? "bg-danger text-white"
+                                        : "bg-warning text-dark";
+                    }
+                    <td><span class="badge @statusClass">@item.Status</span></td>
+                    <td>
+                        @using (Html.BeginForm("UpdateStatus", "Loan", FormMethod.Post, new {@class ="d-flex flex-column flex-md-row gap-1 align-items-start align-items-md-center"}))
+                        {
+                            @Html.Hidden("ApplicationId", item.Id)
+                            <select name="Status" class="form-select form-select-sm">
+                                <option value="Pending" @(item.Status == LoanApplicationSystem.Models.ApplicationStatus.Pending ? "selected" : "")>⏳ Pending</option>
+                                <option value="Approved" @(item.Status == LoanApplicationSystem.Models.ApplicationStatus.Approved ? "selected" : "")>✅ Approved</option>
+                                <option value="Rejected" @(item.Status == LoanApplicationSystem.Models.ApplicationStatus.Rejected ? "selected" : "")>❌ Rejected</option>
+                            </select>
+
+                            <button type="submit" class="btn btn-sm btn-primary mt-2">Update</button>
+                        }
+
+                        <div class="mt-2">
+
+                            <a href="@Url.Action("Details", "Approval", new { applicationId = item.Id })"
+                               class="btn btn-sm"
+                               style="background-color:plum; color: white; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: all 0.3s ease; border-radius: 4px;"
+                               onmouseover="this.style.backgroundColor='#e75480'; this.style.boxShadow='0 6px 10px rgba(0,0,0,0.15)'"
+                               onmouseout="this.style.backgroundColor='plum'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.1)'">
+                                👁️View Approvals
+                            </a>
+
+                        </div>
+
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+   </div>
+    <script>
+            function filterTable() {
+                var searchValue = document.getElementById("searchInput").value.toLowerCase();
+            var statusValue = document.getElementById("statusFilter").value.toLowerCase();
+            var rows = document.querySelectorAll("#loanTable tbody tr");
+
+                rows.forEach(row => {
+                    var company = row.cells[1].textContent.toLowerCase();
+            var status = row.cells[5].textContent.toLowerCase();
+
+            var matchesSearch = company.includes(searchValue);
+            var matchesStatus = !statusValue || status.includes(statusValue);
+
+            row.style.display = (matchesSearch && matchesStatus) ? "" : "none";
+                });
+            }
+
+            document.getElementById("searchInput").addEventListener("input", filterTable);
+            document.getElementById("statusFilter").addEventListener("change", filterTable);
+    </script>
+
+</div>
+
+
+

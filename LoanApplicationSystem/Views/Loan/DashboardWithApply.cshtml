@@ -1,0 +1,171 @@
+﻿
+@{ Layout = null; }
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>CBLOS Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        body {
+            background-color: #eaf4fb;
+        }
+
+        .loan-card {
+            background: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
+            transition: transform 0.3s ease-in-out;
+            border-radius: 8px;
+        }
+
+            .loan-card:hover {
+                transform: scale(1.05);
+            }
+
+        .section-title {
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .card-title {
+            color: #007bff;
+        }
+
+        .btn-outline-primary:hover {
+            background-color: #007bff;
+            color: white;
+        }
+
+        footer {
+            background-color: #212529;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            margin-top: 3rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">CBLOS</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#">Dashboard</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#calculator">Calculator</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/Loan/Apply">Apply</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Documents</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="container text-center py-5">
+        <h1>Welcome to Corporate Banking Loan Origination System</h1>
+        <p class="lead">Manage your business loan applications efficiently and securely</p>
+        <a href="/Loan/Apply" class="btn btn-primary btn-lg mt-3">Apply for a Loan</a>
+    </div>
+
+    <!-- Loan Types Section -->
+    <div class="container">
+        <h2 class="text-center section-title">Explore Loan Options</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card loan-card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Working Capital Loan</h5>
+                        <p class="card-text">Short-term financing to meet daily operational needs and enhance cash flow.</p>
+                        <a class="btn btn-sm btn-outline-primary toggle-btn" data-bs-toggle="collapse" href="#workingCapitalMore">Read more</a>
+                        <div class="collapse mt-2" id="workingCapitalMore">
+                            <p>Ideal for businesses needing liquidity for salaries, rent, and expenses. Short-term with flexible repayment schedules.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card loan-card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Term Loan</h5>
+                        <p class="card-text">Long-term funding for purchasing fixed assets or business expansion.</p>
+                        <a class="btn btn-sm btn-outline-primary toggle-btn" data-bs-toggle="collapse" href="#termLoanMore">Read more</a>
+                        <div class="collapse mt-2" id="termLoanMore">
+                            <p>Capital for investments like equipment, land, or infrastructure, with fixed monthly payments.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card loan-card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Project Finance</h5>
+                        <p class="card-text">Financing large-scale infrastructure or industrial projects.</p>
+                        <a class="btn btn-sm btn-outline-primary toggle-btn" data-bs-toggle="collapse" href="#projectFinanceMore">Read more</a>
+                        <div class="collapse mt-2" id="projectFinanceMore">
+                            <p>Supports projects like energy plants or highways, repaid through project cash flow.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loan Eligibility Calculator -->
+    <div class="container mt-5" id="calculator">
+        <h2 class="text-center section-title">Loan Eligibility Calculator</h2>
+        <div class="card p-4 shadow-sm">
+            <form id="eligibilityForm">
+                <div class="row mb-3">
+                    <div class="col-md-4">
+                        <label for="annualRevenue" class="form-label">Annual Revenue (INR)</label>
+                        <input type="number" class="form-control" id="annualRevenue" required />
+                    </div>
+                    <div class="col-md-4">
+                        <label for="existingLoans" class="form-label">Existing Loans (INR)</label>
+                        <input type="number" class="form-control" id="existingLoans" required />
+                    </div>
+                    <div class="col-md-4">
+                        <label for="requestedLoan" class="form-label">Requested Loan (INR)</label>
+                        <input type="number" class="form-control" id="requestedLoan" required />
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-success">Check Eligibility</button>
+            </form>
+            <div id="result" class="mt-4 alert d-none" role="alert"></div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center mt-5">
+        <p>&copy; 2025 CBLOS | Designed by Corporate IT Team</p>
+    </footer>
+
+    <script>
+        document.getElementById("eligibilityForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+            const revenue = parseFloat(document.getElementById("annualRevenue").value);
+            const loans = parseFloat(document.getElementById("existingLoans").value);
+            const request = parseFloat(document.getElementById("requestedLoan").value);
+            const maxEligible = revenue * 0.6 - loans;
+
+            const result = document.getElementById("result");
+            if (request <= maxEligible && maxEligible > 0) {
+                result.className = "mt-4 alert alert-success";
+                result.textContent = `✅ Eligible! You can apply for up to ₹${maxEligible.toLocaleString("en-IN")}`;
+            } else {
+                result.className = "mt-4 alert alert-danger";
+                result.textContent = `❌ Not eligible. Maximum eligible amount: ₹${Math.max(0, maxEligible).toLocaleString("en-IN")}`;
+            }
+            result.classList.remove("d-none");
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
